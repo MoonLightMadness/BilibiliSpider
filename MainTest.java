@@ -95,7 +95,7 @@ public class MainTest {
             spider=new Spider(bili);
 
             dbb.writeTags(newVideo.get(i).title,extractor.getTags(spider.downLoad()),nowDay);
-            System.out.print("\rProcessing:"+String.valueOf(count)+"/"+String.valueOf(newVideo.size())+" "+newVideo.get(i).title);
+            System.out.print("\rProcessing:"+String.valueOf(count)+"/"+String.valueOf(newVideo.size()-1)+" "+newVideo.get(i).title);
             count++;
             Thread.sleep(5000);
         }
