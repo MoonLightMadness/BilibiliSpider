@@ -96,9 +96,6 @@ public class MainTest {
 
             dbb.writeTags(newVideo.get(i).title,extractor.getTags(spider.downLoad()),nowDay);
             System.out.print("\rProcessing:"+String.valueOf(count)+"/"+String.valueOf(newVideo.size())+" "+newVideo.get(i).title);
-            if(count%20==0&&count!=0) {
-                Thread.sleep(300000);
-            }
             count++;
             Thread.sleep(5000);
         }
