@@ -89,13 +89,13 @@ public class MainTest {
             }
             isRepeat=false;
         }
-        int count=0;
+        int count=1;
         for(int i=0;i<newVideo.size();i++){
             bili.setUrl(new URL(newVideo.get(i).url));
             spider=new Spider(bili);
 
             dbb.writeTags(newVideo.get(i).title,extractor.getTags(spider.downLoad()),nowDay);
-            System.out.print("\rProcessing:"+String.valueOf(count)+"/"+String.valueOf(newVideo.size()-1)+" "+newVideo.get(i).title);
+            System.out.print("\rProcessing:"+String.valueOf(count)+"/"+String.valueOf(newVideo.size())+" "+newVideo.get(i).title);
             count++;
             Thread.sleep(5000);
         }
