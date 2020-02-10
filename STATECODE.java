@@ -23,7 +23,7 @@ public enum STATECODE {
     REDIRECT("REDIRECT",302);
     private String code;
     private int id;
-    private STATECODE(String code,int id){
+    STATECODE(String code, int id){
         this.code=code;
         this.id=id;
     }
