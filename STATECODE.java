@@ -30,7 +30,7 @@ public enum STATECODE {
     public String getStateCodeById(int id){
         for(STATECODE sc:STATECODE.values()){
             if(sc.id==id){
-                return String.valueOf(sc.id)+"_"+sc.code;
+                return sc.code;
             }
         }
         return null;
