@@ -23,14 +23,14 @@ public enum STATECODE {
     REDIRECT("REDIRECT",302);
     private String code;
     private int id;
-    private STATECODE(String code,int id){
+    STATECODE(String code, int id){
         this.code=code;
         this.id=id;
     }
     public String getStateCodeById(int id){
         for(STATECODE sc:STATECODE.values()){
             if(sc.id==id){
-                return String.valueOf(sc.id)+"_"+sc.code;
+                return sc.code;
             }
         }
         return null;
